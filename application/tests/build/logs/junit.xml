@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="26" assertions="26" failures="0" errors="0" time="1.483943">
+    <testsuite name="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" fullPackage="Admin.menu" tests="7" assertions="7" failures="0" errors="0" time="0.457144">
+      <testcase name="test_gagal_akses" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="11" assertions="1" time="0.049391"/>
+      <testcase name="test_load" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="22" assertions="1" time="0.042525"/>
+      <testcase name="test_do_insert" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="27" assertions="1" time="0.105374"/>
+      <testcase name="test_formadd" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="45" assertions="1" time="0.042232"/>
+      <testcase name="testEdit" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="51" assertions="1" time="0.044546"/>
+      <testcase name="test_do_update" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="62" assertions="1" time="0.047110"/>
+      <testcase name="test_delete" class="Admin_menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Admin_menu_test.php" line="79" assertions="1" time="0.125966"/>
+    </testsuite>
+    <testsuite name="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" fullPackage="Login" tests="7" assertions="7" failures="0" errors="0" time="0.289876">
+      <testcase name="test_halamanloginadmin" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="19" assertions="1" time="0.046100"/>
+      <testcase name="test_adminlogin" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="24" assertions="1" time="0.043783"/>
+      <testcase name="test_adminlogin_gagal1" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="33" assertions="1" time="0.041272"/>
+      <testcase name="test_adminlogin_gagal2" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="45" assertions="1" time="0.041514"/>
+      <testcase name="test_adminlogin_gagal3" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="57" assertions="1" time="0.041138"/>
+      <testcase name="test_adminlogin_gagal4" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="67" assertions="1" time="0.041198"/>
+      <testcase name="test_admin_logout" class="Login_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Login_test.php" line="77" assertions="1" time="0.034871"/>
+    </testsuite>
+    <testsuite name="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" fullPackage="Menu" tests="12" assertions="12" failures="0" errors="0" time="0.736924">
+      <testcase name="test_halamanawal" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="20" assertions="1" time="0.046064"/>
+      <testcase name="test_halamanloginuser" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="24" assertions="1" time="0.043716"/>
+      <testcase name="test_userlogin" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="28" assertions="1" time="0.043822"/>
+      <testcase name="test_userlogin_gagal1" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="37" assertions="1" time="0.042916"/>
+      <testcase name="test_adminlogin_gagal2" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="49" assertions="1" time="0.044004"/>
+      <testcase name="test_adminlogin_gagal3" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="61" assertions="1" time="0.041780"/>
+      <testcase name="test_adminlogin_gagal4" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="71" assertions="1" time="0.040664"/>
+      <testcase name="test_user_logout" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="81" assertions="1" time="0.042878"/>
+      <testcase name="test_validationUser_success" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="90" assertions="1" time="0.154968"/>
+      <testcase name="test_validationUser_fail" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="104" assertions="1" time="0.128492"/>
+      <testcase name="test_validationUser_fail2" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="118" assertions="1" time="0.054267"/>
+      <testcase name="test_validationUser_fail3" class="Menu_test" file="C:\xampp\htdocs\FP\application\tests\controllers\Menu_test.php" line="132" assertions="1" time="0.053353"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
