@@ -13,14 +13,6 @@ class Menu extends CI_Model{
 		return $data->result_array();
 	}
 
-	public function getMenuGroup($where){
-		$this->db->select('*');
-    $this->db->where('jenis', $where);
-    $this->db->from('menu');
-    $data = $this->db->get();
-		return $data->result_array();
-	}
-
 	public function getId($where){
  		$this->db->where('nama', $where);
  		$data = $this->db->get('menu');

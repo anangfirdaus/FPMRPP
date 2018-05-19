@@ -19,7 +19,6 @@ class LoginController extends CI_Controller {
     {
       $username = $this->input->post('user');
       $password = $this->input->post('pass');
-      $coba = sha1($password);
       $isLogin = $this->Admin->login_authen($username, $password);
       if ($isLogin == TRUE)
       {
@@ -52,8 +51,7 @@ class LoginController extends CI_Controller {
     {
       $username = $this->input->post('user');
       $password = $this->input->post('pass');
-      $coba = sha1($password);
-      $isLogin = $this->Customer->userlogin_authen($username, $coba);
+      $isLogin = $this->Customer->userlogin_authen($username, $password);
       if ($isLogin == TRUE)
       {
         $userdata = $this->Customer->getSingleCustomer($username);
@@ -103,14 +101,13 @@ class LoginController extends CI_Controller {
 	function registeruser(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-    $coba = sha1($password);
     $email = $this->input->post('email');
     $name = $this->input->post('name');
 		$address = $this->input->post('address');
 
 		$where = array(
   		'username' => $username,
-  		'password' => $coba,
+  		'password' => $password,
   		'email'	   => $email,
       'name'    => $name,
   		'alamat'	 => $address,

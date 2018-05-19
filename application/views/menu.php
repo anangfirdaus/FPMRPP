@@ -24,7 +24,6 @@
                 <th class="col-xs-1">Kode</th>
                 <th class="col-xs-2">Nama</th>
                 <th class="col-xs-1">Harga</th>
-                <th class="col-xs-1">Jenis</th>
                 <th class="col-xs-4">Deskripsi</th>
                 <th class="col-xs-1">Gambar</th>
                 <th class="col-xs-2">Action</th>
@@ -36,12 +35,11 @@
                   <td><?php echo $d['kode']; ?></td>
                   <td><?php echo $d['nama']; ?></td>
                   <td>Rp <?php echo number_format($d['harga'], 2, ',', '.'); ?></td>
-                  <td><?php echo $d['jenis']; ?></td>
                   <td><?php echo $d['deskripsi']; ?></td>
                   <td><a href="<?php echo base_url("/uploads/".$d['gambar']); ?>">Link</a></td>
                   <td align="center">
-                    <a href="<?php echo base_url("admin/menu/update/".$d['kode']); ?>" class="btn btn-primary" role="button">Update</a>
-                    <a href="<?php echo base_url("admin/menu/delete/".$d['kode']); ?>" class="btn btn-danger" role="button">Delete</a>
+                    <a href="<?php echo base_url("AdminController/editMenu/".$d['kode']); ?>" class="btn btn-primary" role="button">Update</a>
+                    <a href="<?php echo base_url("AdminController/deleteMenu/".$d['kode']); ?>" class="btn btn-danger" role="button">Delete</a>
                   </td>
                 </tr>
               <?php }?>

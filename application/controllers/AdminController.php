@@ -58,7 +58,6 @@ class AdminController extends CI_Controller {
     $data = array(
     	'nama' => $this->input->post('nama'),
 			'harga' => $this->input->post('harga'),
-			'jenis' => $this->input->post('jenis'),
 			'deskripsi' => $this->input->post('deskripsi'),
 			'gambar' => $filePath,
 		);
@@ -82,7 +81,6 @@ class AdminController extends CI_Controller {
 			"kode" => $menu[0]['kode'],
 			"nama" => $menu[0]['nama'],
 			"harga" => $menu[0]['harga'],
-      "jenis" => $menu[0]['jenis'],
 			"deskripsi" => $menu[0]['deskripsi'],
 			"gambar" => $menu[0]['gambar'],
 		);
@@ -114,7 +112,6 @@ class AdminController extends CI_Controller {
 
 		$nama	= $_POST['nama'];
 		$harga = $_POST['harga'];
-		$jenis = $_POST['jenis'];
 		$deskripsi = $_POST['deskripsi'];
 		$data_insert = null;
 
@@ -125,7 +122,6 @@ class AdminController extends CI_Controller {
 			$data_insert = array(
 	  		'nama' => $nama,
 	  		'harga' => $harga,
-	  		'jenis'	=> $jenis,
 				'deskripsi' => $deskripsi,
 				'gambar' => $filePath,
 			);
@@ -134,7 +130,6 @@ class AdminController extends CI_Controller {
 			$data_insert = array(
 	  		'nama' => $nama,
 	  		'harga' => $harga,
-	  		'jenis'	=> $jenis,
 				'deskripsi' => $deskripsi,
 			);
 		}

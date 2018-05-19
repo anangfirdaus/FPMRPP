@@ -1,5 +1,5 @@
 <div class="row">
-  <?php foreach ($data as $menu) { ?>
+  <?php foreach ($produk as $menu) { ?>
   <div class="col-xs-12 col-md-3 ">
     <div class="thumbnail">
       <a href="<?php echo base_url('dashboard/detail/'.$menu['kode']) ?>">

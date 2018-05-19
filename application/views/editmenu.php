@@ -20,15 +20,6 @@
             <label>Harga</label>
             <input class="form-control" input type="text" name="harga" value="<?php echo $harga; ?>" required>
           </div>
-          <div class="form-group">
-            <label>Jenis</label>
-            <select class="form-control" name="jenis" required>
-              <option <?php if($jenis == "makanan") {echo "selected";} ?> value="makanan">Makanan</option>
-              <option <?php if($jenis == "minuman") {echo "selected";} ?> value="minuman">Minuman</option>
-              <option <?php if($jenis == "snack") {echo "selected";} ?> value="snack">Snack</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label>Deskripsi</label>
             <textarea class="form-control" name="deskripsi" rows="3" cols="80"><?php echo $deskripsi; ?></textarea>
           </div>

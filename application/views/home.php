@@ -54,7 +54,7 @@
                             <li><a class="color_animation" href="#story">ABOUT</a></li>
                             <li><a class="color_animation" href="#contact">CONTACT</a></li>
                             <li>
-                              <a href="<?php echo base_url('login'); ?>" class="color_animation" style="background-color: #96E16B; color: #1E1E1E !important;">
+                              <a href="<?php echo base_url('LoginController/userloginview'); ?>" class="color_animation" style="background-color: #96E16B; color: #1E1E1E !important;">
                                 LOGIN
                               </a>
                             </li>
