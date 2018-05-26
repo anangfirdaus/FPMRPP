@@ -9,7 +9,6 @@
         <div class="col-xs-9 col-md-9">
           <h4><strong><a href="<?php echo base_url('dashboard/detail/'.$menu['kode']) ?>"><?php echo $menu['nama'] ?></a></strong></h4>
           <p>Rp <?php echo number_format($menu['harga'], 2, ',', '.') ?></p>
-
         </div>
         <div class="col-xs-3 col-md-3" style="padding: 0px;">
           <a

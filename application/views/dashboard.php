@@ -81,15 +81,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Segersumyah</a>
+            <a class="navbar-brand" href="#">Rizki Mebel</a>
         </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav main-nav  clear navbar-right">
             <li><a class="color_animation" href="<?php echo base_url("dashboard/") ?>">PRODUK</a></li>
             <li><a class="color_animation" href="<?php echo base_url("dashboard/keranjang") ?>">KERANJANG</a></li>
-            <li><a class="color_animation" href="<?php echo base_url("KantinController/Custom_order") ?>">KUSTOM PESANAN</a></li>
-            <li><a class="color_animation" href="<?php echo base_url("KantinController/order") ?>">PESANAN</a></li>
+            <li><a class="color_animation" href="<?php echo base_url("KantinController/Penjelasan_kustom") ?>">KUSTOM PESANAN</a></li>
+            <li><a class="color_animation" href="<?php echo base_url("KantinController/pesanan/") ?>">PESANAN</a></li>
             <li>
               <a href="<?php echo base_url('logout'); ?>" class="color_animation">
                 LOGOUT

@@ -6,6 +6,7 @@ class AdminController extends CI_Controller {
     parent::__construct();
     $this->load->model('Menu');
 		$this->load->model('Pesanan');
+		$this->load->model('keluhan');
 		$this->load->helper(array('form', 'url'));
    	if(!$this->session->userdata('admin'))
     {
@@ -23,6 +24,11 @@ class AdminController extends CI_Controller {
 		} else if ($page == "pesanan")
 		{
 			$data = $this->Pesanan->getPesanan();
+		} else if ($page == "pesanan_kustom") {
+			$data= $this->Pesanan->getPesanan_kustom();
+		}
+		else if ($page == "lihat_keluhan") {
+			$data= $this->keluhan->getKeluhan();
 		}
 		$this->load->view('adminpage', array('data' => $data));
 	}
@@ -154,6 +160,19 @@ class AdminController extends CI_Controller {
 		$this->load->view('adminpage', array('data' => $pesanan));
 	}
 
+	public function verifPesanan($id) {
+		$data = array(
+			'status' => 'disetujui',
+		);
+		$where = array(
+			'id_order' => $id,
+		);
+		$this->Pesanan->kirim('pesanan_kustom', $data, $where);
+		$this->session->set_userdata(array('adminpage'=>'pesanan'));
+		$pesanan = $this->Pesanan->getPesanan();
+		$this->load->view('adminpage', array('data' => $pesanan));
+	}
+
 	public function hapusPesanan($id) {
 		$params = array('id_order' => $id);
 		$where = array(
@@ -164,10 +183,39 @@ class AdminController extends CI_Controller {
 		redirect(base_url('admin/pesanan'));
 	}
 
+	public function hapusPesananKustom($id) {
+		$this->Pesanan->hapusKustom($id);
+		$this->session->set_userdata(array('adminpage'=>'pesanan'));
+		redirect(base_url('admin/pesanan_kustom'));
+	}
+
 	public function detailPesanan($id) {
 		$params = array('id_order' => $id);
 		$data = $this->Pesanan->getDetailPesanan($id);
 		$this->session->set_userdata(array('adminpage'=>'detailPesanan'));
 		redirect(base_url('admin/pesanan'));
+	}
+
+	public function balas_keluhan($id){
+		$data['keluhan'] = $this->keluhan->getDetailKeluhan($id);
+		$this->session->set_userdata(array('adminpage'=>'halaman_balas_keluhan'));
+		$username = $this->session->userdata('admin');
+		$this->load->view('adminpage',$data);
+	}
+	public function do_balas($id)
+	{
+		$balasan = array(
+			'balasan' => $this->input->post('balasan'),
+			'tanggal_balasan' => date('d/m/Y')
+		);
+		$this->keluhan->kirimBalasan($id,$balasan);
+		redirect(base_url('admin/lihat_keluhan'));
+	}
+	public function detail_keluhan($id)
+	{
+		$data['keluhan'] = $this->keluhan->getDetailKeluhan($id);
+		$this->session->set_userdata(array('adminpage'=>'detail_keluhan'));
+		$username = $this->session->userdata('admin');
+		$this->load->view('adminpage',$data);
 	}
 }

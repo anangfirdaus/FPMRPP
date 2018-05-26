@@ -1,6 +1,6 @@
 <?php
-  if ($this->session->userdata("admin") == null) {
-    redirect(base_url('admin'));
+  if ($this->session->userdata("user") == null) {
+    redirect(base_url('login'));
   }
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Admin Page</title>
+  <title>User Page</title>
   <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
   <!-- Bootstrap Core CSS -->
   <link href="<?php echo base_url()."assets/css/bootstrap.min.css"?>" rel="stylesheet">
@@ -49,7 +49,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo base_url('admin/menu') ?>">Rizki Mebel</a>
+        <a class="navbar-brand" href="<?php echo base_url('admin/menu') ?>">Segersumyah</a>
       </div>
       <!-- Top Menu Items -->
       <ul class="nav navbar-right top-nav">
@@ -68,23 +68,23 @@
       <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-          <li class="<?php if ($this->session->userdata("adminpage") == "menu") { echo "active"; } ?>">
-            <a href="<?php echo base_url("admin/menu") ?>"><strong>Menu</strong></a>
+          <li>
+            <a href="<?php echo base_url("KantinController/pesanan_kustom") ?>"><strong>Pesanan Kustom</strong></a>
           </li>
-          <li class="<?php if ($this->session->userdata("adminpage") == "pesanan") { echo "active"; } ?>">
-            <a href="<?php echo base_url("admin/pesanan") ?>"><strong>Pesanan</strong></a>
+          <li>
+            <a href="<?php echo base_url("KantinController/pesanan") ?>"><strong>Pesanan</strong></a>
           </li>
-          <li class="<?php if ($this->session->userdata("adminpage") == "pesanan_kustom") { echo "active"; } ?>">
-            <a href="<?php echo base_url("admin/pesanan_kustom") ?>"><strong>Pesanan Kustom</strong></a>
+          <li>
+            <a href="<?php echo base_url("KantinController/halaman_keluhan") ?>"><strong>Keluhan</strong></a>
           </li>
-          <li class="<?php if ($this->session->userdata("adminpage") == "keluhan") { echo "active"; } ?>">
-            <a href="<?php echo base_url("admin/lihat_keluhan") ?>"><strong>Keluhan</strong></a>
+          <li>
+            <a href="<?php echo base_url("KantinController/halaman_balasan") ?>"><strong>Balasan Keluhan</strong></a>
           </li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
     </nav>
-    <?php $this->load->view($this->session->userdata('adminpage')); ?>
+    <?php $this->load->view($this->session->userdata('userpage')); ?>
   </div>
   <!-- /#wrapper -->
   <!-- jQuery -->
